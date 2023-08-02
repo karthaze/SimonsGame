@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <title>Simon's Game</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <div class="tagg">Simon's Game</div>
+        <p>Introduction: Simon's Game is a classic memory-based electronic game that has entertained players for decades. 
+            Originally introduced in 1978, Simon challenges players to remember and repeat increasingly complex patterns of colored lights and sounds. 
+            Over the years, it has become an iconic symbol of nostalgia and fun.</p>
+        <p>In this article, I will walk you through the process of creating a digital replica of Simon's Game
+            using the power of HTML, CSS, and JavaScript. By the end of this tutorial, you'll have your own
+            interactive version of Simon's Game that you can play right in your web browser.</p>
+        <p>To create our digital replica of Simon's Game, we'll break down the process into several key steps:</p>  
+        <p>1. Setting up the HTML structure</p>
+        <p>2. Styling with CSS</p>
+        <p>3. Handling user interactions with JavaScript</p>
+        <p>4. Implementing the game logic</p>
+        <p>5. Adding feedback and effects</p>
+        <p>6. Making it responsive</p>
+        <p>So, let's get started and embark on this exciting journey. Click start and play your first game.</p>
+
+        <div class="scoree">Level :  <span id="scoreDisplay"></span></div>
+
+        <div class="toppanel">
+            <div onclick="panelClicked(event.currentTarget)" class="panel topleft"></div>
+            <div onclick="panelClicked(event.currentTarget)" class="panel topright"></div>
+        </div>
+
+        <div class="bottompanel">
+            <div onclick="panelClicked(event.currentTarget)" class="panel bottomleft"></div>
+            <div onclick="panelClicked(event.currentTarget)" class="panel bottomright"></div>
+        </div>
+        
+        <button onclick="startFlashing()">Start</button>
+
+        <p>Source Code: <a href="https://github.com/karthaze/SimonsGame.git">GitHub Repository</a></p>
+        
+        <script src="app.js"></script>
+    </body>
+
+</html>

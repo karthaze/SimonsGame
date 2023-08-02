@@ -1,0 +1,143 @@
+body{
+    background-color: rgb(39, 39, 39);
+    text-align: center;
+}
+
+p {
+    width: 80%;
+    margin-left: 5%;
+    text-align: start;
+    color: #fff;
+}
+
+.scoree{
+    margin-top: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 40px;
+    border-radius: 20px;
+    background: #414141;
+}
+
+.panel{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    border-color: white;
+    margin:5px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.topleft{
+    background-color: rgb(233, 40, 40);
+    border-top-left-radius: 200px;
+}
+
+.topright{
+    background-color: rgb(0, 106, 255);
+    border-top-right-radius: 200px;
+}
+
+.bottomleft{
+    background-color: yellow;
+    border-bottom-left-radius: 200px;
+}
+
+.bottomright{
+    background-color: green;
+    border-bottom-right-radius: 200px;
+}
+
+.active{
+    box-shadow: 0 0 20px 20px rgb(0, 0, 0);
+    transform: scale(1.1);
+}
+
+
+.panel:hover {
+    box-shadow: 0 0 10px 10px rgb(23, 23, 23);
+    transform: scale(1.03);
+}
+
+.tagg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 90%;
+    margin-left: 5%;
+    height: 40px;
+    background-color: rgb(134, 134, 134);
+    border-radius: 20px;
+}
+
+button {
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
+    background: #0e0e0e;
+    border-radius: 100px;
+}
+
+button{
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #000000;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+}
+
+button:before {
+    content: '';
+    background: linear-gradient(45deg, rgb(233, 40, 40), rgb(0, 106, 255), yellow, green);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 100px;
+}
+
+button:active {
+    color: #000
+}
+
+button:active:after {
+    background: transparent;
+}
+
+button:hover:before {
+    opacity: 1;
+}
+
+button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 100px;
+}
+
+@keyframes button {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
